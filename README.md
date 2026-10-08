@@ -10,7 +10,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-IbrahimHassaan1-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/IbrahimHassaan1)
 [![Location](https://img.shields.io/badge/Location-Maadi%2C%20Cairo%2C%20Egypt-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white)](https://maps.google.com/?q=Maadi,+Cairo,+Egypt)
 
-[🌐 View Live Portfolio](https://ibrahimhassaan1.github.io/ibrahim-hassaan/) • [📄 Download CV (PDF)](./Ibrahim_Hassaan_CV.pdf) • [📝 Download CV (WPS/Doc)](./Ibrahim_Hassaan_CV.wps) • [📋 View Markdown CV](./Ibrahim_Hassaan_CV.md)
+[🌐 View Live Portfolio](https://ibrahimhassaan1.github.io/ibrahim-hassaan/) • [📄 Download CV (PDF)](./Ibrahim_Hassaan_CV.pdf) • [📝 Download CV (WPS/Doc)](./Ibrahim_Hassaan_CV.wps) • [📋 View GitHub Gist](https://gist.github.com/IbrahimHassaan1/b2e6b85eda3ea484c28d9e83bd5beaac)
 
 ---
 

@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 3. Scroll Progress Indicator & Back-to-Top Button
+  // 3. Scroll Progress Indicator & Back-to-Top
   const scrollProgress = document.getElementById('scrollProgress');
   const backToTopBtn = document.getElementById('backToTopBtn');
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (backToTopBtn) {
-      if (window.scrollY > 400) {
+      if (window.scrollY > 350) {
         backToTopBtn.classList.add('show');
       } else {
         backToTopBtn.classList.remove('show');
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toastNotification.classList.add('show');
     setTimeout(() => {
       toastNotification.classList.remove('show');
-    }, 2800);
+    }, 2400);
   }
 
   // 5. Copy Email Action
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const email = btn.getAttribute('data-email') || 'ibrahimhassaan3@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
-        showToast('Email address copied to clipboard! ✨');
+        showToast('Email address copied to clipboard');
       });
     });
   });
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const textToCopy = codeBlock.innerText;
       navigator.clipboard.writeText(textToCopy).then(() => {
         copyCodeBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
-        showToast('Python snippet copied to clipboard! 📋');
+        showToast('Code snippet copied');
         setTimeout(() => {
           copyCodeBtn.innerHTML = '<i class="fa-regular fa-copy"></i>';
         }, 2000);
@@ -120,8 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 8. Skills Category Filter Tabs
-  const filterTabs = document.querySelectorAll('#skillFilters .filter-tab');
-  const skillCards = document.querySelectorAll('.skill-card');
+  const filterTabs = document.querySelectorAll('#skillFilters .filter-btn');
+  const skillTiles = document.querySelectorAll('.skill-tile');
 
   filterTabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -130,20 +130,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const filterValue = tab.getAttribute('data-filter');
 
-      skillCards.forEach(card => {
-        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-          card.style.display = 'flex';
-          card.style.animation = 'fadeIn 0.4s ease forwards';
+      skillTiles.forEach(tile => {
+        if (filterValue === 'all' || tile.getAttribute('data-category') === filterValue) {
+          tile.style.display = 'flex';
         } else {
-          card.style.display = 'none';
+          tile.style.display = 'none';
         }
       });
     });
   });
 
   // 9. Projects Category Filter Tabs
-  const projectTabs = document.querySelectorAll('#projectFilters .filter-tab');
-  const projectCards = document.querySelectorAll('.project-card');
+  const projectTabs = document.querySelectorAll('#projectFilters .filter-btn');
+  const projectCards = document.querySelectorAll('.minimal-card');
 
   projectTabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -155,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
       projectCards.forEach(card => {
         if (filterValue === 'all' || card.getAttribute('data-pcategory') === filterValue) {
           card.style.display = 'flex';
-          card.style.animation = 'fadeIn 0.4s ease forwards';
         } else {
           card.style.display = 'none';
         }
@@ -170,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     let currentSection = '';
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
+      const sectionTop = section.offsetTop - 100;
       const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
         currentSection = section.getAttribute('id');
@@ -184,92 +182,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // 11. Interactive Constellation Canvas Particle Background
-  const canvas = document.getElementById('bgCanvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
-
-    window.addEventListener('resize', () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    });
-
-    const particles = [];
-    const particleCount = Math.min(Math.floor(window.innerWidth / 20), 45);
-
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        radius: Math.random() * 2 + 1,
-      });
-    }
-
-    let mouse = { x: null, y: null, maxDist: 120 };
-    window.addEventListener('mousemove', (e) => {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
-    });
-
-    window.addEventListener('mouseout', () => {
-      mouse.x = null;
-      mouse.y = null;
-    });
-
-    function renderParticles() {
-      ctx.clearRect(0, 0, width, height);
-
-      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-      const particleColor = isDark ? 'rgba(99, 102, 241, 0.4)' : 'rgba(79, 70, 229, 0.25)';
-      const lineColor = isDark ? 'rgba(99, 102, 241, 0.12)' : 'rgba(79, 70, 229, 0.08)';
-
-      for (let i = 0; i < particles.length; i++) {
-        let p = particles[i];
-        p.x += p.vx;
-        p.y += p.vy;
-
-        if (p.x < 0 || p.x > width) p.vx *= -1;
-        if (p.y < 0 || p.y > height) p.vy *= -1;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = particleColor;
-        ctx.fill();
-
-        for (let j = i + 1; j < particles.length; j++) {
-          let p2 = particles[j];
-          let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-          if (dist < 130) {
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = lineColor;
-            ctx.lineWidth = 0.8;
-            ctx.stroke();
-          }
-        }
-
-        if (mouse.x !== null && mouse.y !== null) {
-          let mouseDist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-          if (mouseDist < mouse.maxDist) {
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = isDark ? 'rgba(168, 85, 247, 0.25)' : 'rgba(124, 58, 237, 0.18)';
-            ctx.lineWidth = 1;
-            ctx.stroke();
-          }
-        }
-      }
-
-      requestAnimationFrame(renderParticles);
-    }
-
-    renderParticles();
-  }
 });

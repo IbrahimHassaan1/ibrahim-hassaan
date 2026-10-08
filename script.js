@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 4. Skills Category Filter Tabs
-  const filterTabs = document.querySelectorAll('.filter-tab');
+  const filterTabs = document.querySelectorAll('#skillFilters .filter-tab');
   const skillCards = document.querySelectorAll('.skill-card');
 
   filterTabs.forEach(tab => {
@@ -79,7 +79,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Active Nav Link on Scroll
+  // 5. Projects Category Filter Tabs
+  const projectTabs = document.querySelectorAll('#projectFilters .filter-tab');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  projectTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      projectTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const filterValue = tab.getAttribute('data-pfilter');
+
+      projectCards.forEach(card => {
+        if (filterValue === 'all' || card.getAttribute('data-pcategory') === filterValue) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeIn 0.4s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // 6. Active Nav Link on Scroll
   const sections = document.querySelectorAll('section');
   const navItems = document.querySelectorAll('.nav-link');
 

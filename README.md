@@ -4,12 +4,13 @@
 
 ### **Computer Science & AI Graduate | Aspiring Software & ML Engineer**
 
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-GitHub_Pages-6366f1?style=for-the-badge&logo=githubpages&logoColor=white)](https://ibrahimhassaan1.github.io/ibrahim-hassaan/)
 [![Email](https://img.shields.io/badge/Email-ibrahimhassaan3%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ibrahimhassaan3@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Ibrahim--Hassaan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ibrahim-hassaan)
 [![GitHub](https://img.shields.io/badge/GitHub-IbrahimHassaan1-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/IbrahimHassaan1)
 [![Location](https://img.shields.io/badge/Location-Maadi%2C%20Cairo%2C%20Egypt-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white)](https://maps.google.com/?q=Maadi,+Cairo,+Egypt)
 
-[📄 Download CV (PDF)](./Ibrahim_Hassaan_CV.pdf) • [📝 Download CV (WPS/Doc)](./Ibrahim_Hassaan_CV.wps) • [📋 View CV Gist](https://gist.github.com/IbrahimHassaan1)
+[🌐 View Live Portfolio](https://ibrahimhassaan1.github.io/ibrahim-hassaan/) • [📄 Download CV (PDF)](./Ibrahim_Hassaan_CV.pdf) • [📝 Download CV (WPS/Doc)](./Ibrahim_Hassaan_CV.wps) • [📋 View Markdown CV](./Ibrahim_Hassaan_CV.md)
 
 ---
 
@@ -75,6 +76,22 @@ Motivated Computer Science graduate specialising in **Artificial Intelligence an
 
 - **Arabic:** Native proficiency 🇪🇬
 - **English:** Full professional proficiency 🇬🇧
+
+---
+
+## 📂 Repository Structure
+
+```
+.
+├── index.html               # Interactive Portfolio Website (GitHub Pages ready)
+├── style.css                # Modern CSS Design System & Theme Engine
+├── script.js                # Dynamic filters, theme toggle & animations
+├── README.md                # Recruiter-friendly CV & documentation
+├── Ibrahim_Hassaan_CV.md    # Markdown CV (ready for GitHub Gist)
+├── Ibrahim_Hassaan_CV.pdf   # Complete PDF CV Download
+├── Ibrahim_Hassaan_CV.wps   # Original WPS/Word Document
+└── .gitignore               # Clean repository tracking
+```
 
 ---
 

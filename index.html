@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ibrahim Hassaan | Computer Science & AI Engineer</title>
+  <meta name="description" content="Portfolio & CV of Ibrahim Hesham Hassaan - Computer Science & AI Graduate, aspiring Software & Machine Learning Engineer based in Cairo, Egypt." />
+  <meta name="keywords" content="Ibrahim Hassaan, Computer Science, Artificial Intelligence, Machine Learning, Portfolio, Software Engineer, C++, Python, Java" />
+  <meta name="author" content="Ibrahim Hesham Hassaan" />
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ibrahim Hassaan | Portfolio & CV" />
+  <meta property="og:description" content="Computer Science & AI Graduate | Aspiring Software & ML Engineer." />
+  <meta property="og:url" content="https://ibrahimhassaan1.github.io/ibrahim-hassaan/" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background Glow & Grid Canvas -->
+  <div class="background-decorations">
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-bottom-right"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="nav-brand" aria-label="Ibrahim Hassaan Home">
+        <span class="brand-badge">&lt;IH /&gt;</span>
+        <span class="brand-text">Ibrahim Hassaan</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="btn-icon" aria-label="Toggle theme" title="Toggle Light/Dark Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="./Ibrahim_Hassaan_CV.pdf" class="btn btn-sm btn-primary" download target="_blank">
+          <i class="fa-solid fa-file-pdf"></i> CV PDF
+        </a>
+        <button id="mobileMenuBtn" class="btn-icon mobile-menu-toggle" aria-label="Open mobile menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="section hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Available for Software & AI Engineering Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Ibrahim Hassaan</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            <strong>Computer Science & AI Graduate</strong> | Aspiring Software & ML Engineer
+          </p>
+
+          <p class="hero-description">
+            Passionate about building intelligent software systems, scalable backend architectures, and machine learning models. Specialised in AI & Machine Learning at the British University in Egypt.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-laptop-code"></i> Explore Work
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-solid fa-envelope"></i> Get In Touch
+            </a>
+            <a href="./Ibrahim_Hassaan_CV.pdf" class="btn btn-glass" download target="_blank">
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            <a href="https://linkedin.com/in/ibrahim-hassaan" target="_blank" rel="noopener noreferrer" class="social-icon-badge" title="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="social-icon-badge" title="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:ibrahimhassaan3@gmail.com" class="social-icon-badge" title="Send Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://maps.google.com/?q=Maadi,+Cairo,+Egypt" target="_blank" rel="noopener noreferrer" class="social-icon-badge" title="Location: Maadi, Cairo, Egypt">
+              <i class="fa-solid fa-location-dot"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="code-card-wrapper">
+            <div class="code-card-header">
+              <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="window-title">engineer_profile.py</span>
+            </div>
+            <pre class="code-block"><code><span class="code-keyword">class</span> <span class="code-class">SoftwareEngineer</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):
+        self.name = <span class="code-str">"Ibrahim Hesham Hassaan"</span>
+        self.role = <span class="code-str">"AI & Software Developer"</span>
+        self.location = <span class="code-str">"Maadi, Cairo, Egypt"</span>
+        self.university = <span class="code-str">"The British University in Egypt"</span>
+        self.degree = <span class="code-str">"BSc Computer Science (AI & ML)"</span>
+        self.languages = [<span class="code-str">"C++"</span>, <span class="code-str">"Python"</span>, <span class="code-str">"Java"</span>, <span class="code-str">"HTML/CSS"</span>]
+        
+    <span class="code-keyword">def</span> <span class="code-func">get_mission</span>(self):
+        <span class="code-keyword">return</span> <span class="code-str">"Transforming complex challenges into robust, intelligent software."</span>
+
+engineer = <span class="code-class">SoftwareEngineer</span>()
+print(engineer.get_mission())</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">About Me</span>
+          <h2 class="section-title">Bridging Theory, AI & Engineering</h2>
+          <p class="section-subtitle">Dedicated to creating elegant, high-impact digital solutions.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card main-about-card">
+            <h3>Profile Summary</h3>
+            <p>
+              I am a motivated Computer Science graduate specialising in <strong>Artificial Intelligence and Machine Learning</strong> at the British University in Egypt. My background combines solid foundational computer science principles, practical software development in diverse languages, and hands-on exposure to IT infrastructure troubleshooting.
+            </p>
+            <p>
+              I thrive in collaborative, English-speaking technical environments where I can apply rigorous analytical thinking, build intelligent applications, and continuously expand my engineering expertise.
+            </p>
+
+            <div class="highlights-row">
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="highlight-info">
+                  <h4>AI & ML Focus</h4>
+                  <span>Algorithms, Data Visualisation, Research</span>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="highlight-info">
+                  <h4>Multi-Language</h4>
+                  <span>C++, Python, Java, Web Technologies</span>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-server"></i></div>
+                <div class="highlight-info">
+                  <h4>IT & Systems</h4>
+                  <span>Hardware/Software Troubleshooting & Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stats-column">
+            <div class="stat-card">
+              <span class="stat-number">2026</span>
+              <span class="stat-label">BSc Computer Science (AI & ML)</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Core Languages & Web Technologies</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">2</span>
+              <span class="stat-label">Languages (Arabic Native, English Fluent)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Tech Stack</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">Tools, languages, and frameworks I leverage to solve technical problems.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-tabs" id="skillFilters">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="languages">Languages</button>
+          <button class="filter-tab" data-filter="tools">IDEs & Tools</button>
+          <button class="filter-tab" data-filter="domains">Core Competencies</button>
+        </div>
+
+        <div class="skills-grid" id="skillsContainer">
+          <!-- Languages -->
+          <div class="skill-card" data-category="languages">
+            <div class="skill-icon cplusplus"><i class="fa-solid fa-code"></i></div>
+            <div class="skill-info">
+              <h3>C++</h3>
+              <p>Object-Oriented Programming, Data Structures, Performance Optimization</p>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="languages">
+            <div class="skill-icon python"><i class="fa-brands fa-python"></i></div>
+            <div class="skill-info">
+              <h3>Python</h3>
+              <p>AI/ML Algorithms, Scripting, Data Visualisation, Automation</p>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="languages">
+            <div class="skill-icon java"><i class="fa-brands fa-java"></i></div>
+            <div class="skill-info">
+              <h3>Java</h3>
+              <p>Object-Oriented Design, Application Logic, Modular Architecture</p>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="languages">
+            <div class="skill-icon html5"><i class="fa-brands fa-html5"></i></div>
+            <div class="skill-info">
+              <h3>HTML5</h3>
+              <p>Semantic Layouts, Accessibility (a11y), Clean DOM Structure</p>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="languages">
+            <div class="skill-icon css3"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="skill-info">
+              <h3>CSS3</h3>
+              <p>Responsive Layouts, Glassmorphism, Animations, Modern UI/UX</p>
+            </div>
+          </div>
+
+          <!-- Tools & IDEs -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon vs"><i class="fa-solid fa-desktop"></i></div>
+            <div class="skill-info">
+              <h3>Visual Studio</h3>
+              <p>C++ and C# Development, Debugging, Solution Architecting</p>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon pycharm"><i class="fa-solid fa-terminal"></i></div>
+            <div class="skill-info">
+              <h3>PyCharm</h3>
+              <p>Python IDE, Environment Management, ML Workflow Tooling</p>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon netbeans"><i class="fa-solid fa-cubes"></i></div>
+            <div class="skill-info">
+              <h3>Apache NetBeans</h3>
+              <p>Java Application Building, GUI Design & Refactoring</p>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon git"><i class="fa-brands fa-git-alt"></i></div>
+            <div class="skill-info">
+              <h3>Git & GitHub</h3>
+              <p>Version Control, Repository Maintenance, Collaboration</p>
+            </div>
+          </div>
+
+          <!-- Domains & Methodologies -->
+          <div class="skill-card" data-category="domains">
+            <div class="skill-icon ai"><i class="fa-solid fa-microchip"></i></div>
+            <div class="skill-info">
+              <h3>Artificial Intelligence & ML</h3>
+              <p>Model Evaluation, Feature Engineering, Neural Network Concepts</p>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="domains">
+            <div class="skill-icon problem"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <div class="skill-info">
+              <h3>Problem Solving</h3>
+              <p>Algorithmic Optimization, Edge Case Analysis, Debugging</p>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="domains">
+            <div class="skill-icon data-vis"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="skill-info">
+              <h3>Data Visualisation & Research</h3>
+              <p>Translating Complex Data into Actionable Insights & Reports</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Career Journey</span>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">Hands-on practical experience in technical and IT environments.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">IT Trainee</h3>
+                  <h4 class="timeline-company">CEG International • Doha, Qatar</h4>
+                </div>
+                <span class="timeline-badge">Oct 2023 – Nov 2023</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Delivered frontline IT and technical support to internal departments, troubleshooting diverse hardware, operating system, and software issues.</li>
+                <li>Diagnosed network connectivity problems and system errors with high customer satisfaction and minimal downtime.</li>
+                <li>Accurately logged incident tickets and escalated complex infrastructure issues to senior systems and network engineers.</li>
+                <li>Engaged in professional training workshops covering enterprise IT infrastructure standards and troubleshooting protocols.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">IT Support</span>
+                <span class="tag">Hardware Troubleshooting</span>
+                <span class="tag">Software Diagnostics</span>
+                <span class="tag">Ticket Escalation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Academic Background</span>
+          <h2 class="section-title">Education & Qualifications</h2>
+          <p class="section-subtitle">Rigorous training in computer science, machine learning, and AI.</p>
+        </div>
+
+        <div class="education-grid">
+          <div class="education-card featured">
+            <div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="education-content">
+              <span class="education-period">Graduation: 2026</span>
+              <h3>BSc in Computer Science</h3>
+              <h4>The British University in Egypt (BUE) — Cairo, Egypt</h4>
+              <p class="education-specialisation"><strong>Specialisation:</strong> Artificial Intelligence & Machine Learning</p>
+              <p class="education-details">
+                Focused on machine learning algorithms, deep learning fundamentals, data structures, object-oriented software engineering, database design, and software architecture.
+              </p>
+            </div>
+          </div>
+
+          <div class="education-card">
+            <div class="education-icon"><i class="fa-solid fa-school"></i></div>
+            <div class="education-content">
+              <span class="education-period">Oct 2016 – May 2019</span>
+              <h3>High School Diploma</h3>
+              <h4>Al-Furqan Secondary School — Algharafa, Doha, Qatar</h4>
+              <p class="education-details">
+                Strong foundational background in mathematics, advanced sciences, and analytical studies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS / SHOWCASE -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Engineering Work</span>
+          <h2 class="section-title">Featured Projects & Systems</h2>
+          <p class="section-subtitle">Showcase of software development, AI implementations, and systems.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-banner">
+              <div class="project-badge">AI & ML</div>
+              <i class="fa-solid fa-brain project-banner-icon"></i>
+            </div>
+            <div class="project-body">
+              <h3>AI Classification & Prediction Models</h3>
+              <p>Machine learning workflows and predictive modeling leveraging Python, feature extraction, data visualisation, and performance benchmarking.</p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Machine Learning</span>
+                <span class="tech-pill">Data Visualisation</span>
+                <span class="tech-pill">PyCharm</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="btn-link">
+                  <i class="fa-brands fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-banner">
+              <div class="project-badge">Systems & OOP</div>
+              <i class="fa-solid fa-microchip project-banner-icon"></i>
+            </div>
+            <div class="project-body">
+              <h3>C++ & Java Core Applications</h3>
+              <p>Robust object-oriented architectures implementing advanced data structures, algorithmic problem solving, and computational efficiency.</p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">C++</span>
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">Data Structures</span>
+                <span class="tech-pill">Visual Studio</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="btn-link">
+                  <i class="fa-brands fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-banner">
+              <div class="project-badge">Web & Portfolio</div>
+              <i class="fa-solid fa-globe project-banner-icon"></i>
+            </div>
+            <div class="project-body">
+              <h3>Interactive Portfolio & CV Hub</h3>
+              <p>Modern, responsive, glassmorphic portfolio and CV system featuring dark/light modes, live filters, and recruiter-friendly documentation.</p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">GitHub Pages</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/IbrahimHassaan1/ibrahim-hassaan" target="_blank" rel="noopener noreferrer" class="btn-link">
+                  <i class="fa-brands fa-github"></i> Repository
+                </a>
+                <a href="./Ibrahim_Hassaan_CV.pdf" target="_blank" class="btn-link">
+                  <i class="fa-solid fa-file-pdf"></i> CV PDF
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Get In Touch</span>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-subtitle">Interested in working together or discussing opportunities? Reach out anytime!</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-info-cards">
+            <a href="mailto:ibrahimhassaan3@gmail.com" class="contact-card">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-text">
+                <span class="contact-label">Email Me</span>
+                <span class="contact-val">ibrahimhassaan3@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/ibrahim-hassaan" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div class="contact-text">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-val">linkedin.com/in/ibrahim-hassaan</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="contact-text">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-val">github.com/IbrahimHassaan1</span>
+              </div>
+            </a>
+
+            <div class="contact-card no-hover">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-text">
+                <span class="contact-label">Location</span>
+                <span class="contact-val">Maadi, Cairo, Egypt</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-contact-box">
+            <h3>Quick CV Downloads</h3>
+            <p>Download my updated resume in your preferred format:</p>
+            <div class="download-btn-group">
+              <a href="./Ibrahim_Hassaan_CV.pdf" class="btn btn-primary" download target="_blank">
+                <i class="fa-solid fa-file-pdf"></i> Download PDF CV
+              </a>
+              <a href="./Ibrahim_Hassaan_CV.wps" class="btn btn-outline" download>
+                <i class="fa-solid fa-file-word"></i> Download WPS / Doc
+              </a>
+              <a href="https://gist.github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="btn btn-glass">
+                <i class="fa-solid fa-code"></i> View Markdown Gist
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="brand-badge">&lt;IH /&gt;</span>
+        <span>Ibrahim Hesham Hassaan</span>
+      </div>
+      <p class="footer-copyright">
+        &copy; <span id="currentYear"></span> Ibrahim Hassaan. Computer Science & AI Graduate. All rights reserved.
+      </p>
+      <div class="footer-links">
+        <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,29 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ibrahim Hassaan — Computer Science & AI Engineer</title>
-  <meta name="description"
-    content="Portfolio & Curriculum Vitae of Ibrahim Hesham Hassaan. Computer Science & AI Graduate, aspiring Software, Machine Learning & Autonomous AI Agent Engineer." />
-  <meta name="keywords"
-    content="Ibrahim Hassaan, Computer Science, Artificial Intelligence, Machine Learning, Google Antigravity SDK, AI Agents, Software Engineer, C++, Python, Java" />
+  <meta name="description" content="Portfolio & Curriculum Vitae of Ibrahim Hesham Hassaan. Computer Science & AI Graduate, aspiring Software, Machine Learning & Autonomous AI Agent Engineer." />
+  <meta name="keywords" content="Ibrahim Hassaan, Computer Science, Artificial Intelligence, Machine Learning, Google Antigravity SDK, AI Agents, Software Engineer, C++, Python, Java" />
   <meta name="author" content="Ibrahim Hesham Hassaan" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Ibrahim Hassaan — Software & AI Engineer" />
-  <meta property="og:description"
-    content="Computer Science & AI Graduate | Aspiring Software, ML & Autonomous Agent Engineer." />
+  <meta property="og:description" content="Computer Science & AI Graduate | Aspiring Software, ML & Autonomous Agent Engineer." />
   <meta property="og:url" content="https://ibrahimhassaan1.github.io/ibrahim-hassaan/" />
 
   <!-- Typography: Inter + Plus Jakarta Sans + Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -31,308 +25,471 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- Scroll Progress -->
+  <!-- Scroll Progress Indicator -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- Animated Ambient Glow Orbs -->
-  <div class="animated-bg" aria-hidden="true">
-    <div class="bg-orb bg-orb-1"></div>
-    <div class="bg-orb bg-orb-2"></div>
-    <div class="bg-orb bg-orb-3"></div>
-  </div>
+  <!-- Ambient Dark Grid Background -->
+  <div class="ambient-grid" aria-hidden="true"></div>
 
-  <!-- Interactive Constellation Particles -->
-  <canvas id="particlesCanvas" class="particles-canvas" aria-hidden="true"></canvas>
+  <!-- Ambient Glow Spotlights -->
+  <div class="glow-orb glow-orb-top" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-bottom" aria-hidden="true"></div>
 
-  <!-- Minimal Background Grid -->
-  <div class="minimal-grid-bg"></div>
-
-  <!-- Navigation Bar -->
-  <header class="navbar-wrapper">
-    <nav class="navbar" id="navbar">
-      <a href="#hero" class="nav-brand" aria-label="Ibrahim Hassaan">
-        <span class="brand-badge">IH</span>
-        <span class="brand-text">Ibrahim Hassaan</span>
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Ibrahim Hassaan">
+        <span class="brand-monogram">IH</span>
+        <span class="brand-name">Ibrahim Hassaan</span>
       </a>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#cv" class="nav-link">CV</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#work" class="nav-item">Work</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#cv" class="nav-item">CV</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
 
-      <div class="nav-actions">
-        <button id="themeToggle" class="btn-icon" aria-label="Toggle theme" title="Toggle Theme">
-          <i class="fa-solid fa-moon"></i>
-        </button>
-        <a href="./Ibrahim_Hassaan_CV.pdf" class="btn btn-sm btn-primary" download target="_blank">
-          <i class="fa-solid fa-arrow-down"></i> Resume PDF
+      <div class="header-actions">
+        <div class="status-indicator">
+          <span class="status-dot"></span>
+          <span class="status-text">AVAILABLE FOR WORK</span>
+        </div>
+        <a href="./Ibrahim_Hassaan_CV.pdf" class="btn btn-nav" download target="_blank">
+          Resume <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
-        <button id="mobileMenuBtn" class="btn-icon mobile-menu-toggle" aria-label="Open menu">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main>
     <!-- HERO SECTION -->
     <section id="hero" class="hero-section">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="status-pill">
-            <span class="status-dot"></span>
-            <span>Available for Software & AI Engineering Roles</span>
+      <div class="container hero-grid">
+        <!-- Hero Left Column -->
+        <div class="hero-text-col">
+          <div class="hero-breadcrumb">
+            <span class="text-lime font-mono">CS • AI & ML ENGINEER • CAIRO, EG</span>
           </div>
 
           <h1 class="hero-title">
-            Ibrahim Hesham <span class="hero-title-gradient">Hassaan</span>
+            I build systems<br />
+            <span class="hero-title-dim">that learn.</span>
           </h1>
 
-          <p class="hero-role">
-            Computer Science & AI Graduate <span class="dot-sep">•</span> Aspiring Software, ML & AI Agent Engineer
+          <p class="hero-description">
+            Computer science engineer focused on turning ambitious AI research, autonomous agent orchestration, and machine learning into reliable, human-centered products.
           </p>
 
-          <p class="hero-lead">
-            Specialised in Artificial Intelligence, Machine Learning, and Autonomous Multi-Agent Systems. Experienced in
-            developing scalable backend applications in C++, Python, and Java, leveraging modern SDKs like Google
-            Antigravity.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#cv" class="btn btn-primary">
-              <i class="fa-solid fa-file-lines"></i> View CV
+          <div class="hero-cta-group">
+            <a href="#work" class="btn btn-lime">
+              Explore my work <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
-            <a href="#projects" class="btn btn-secondary">
-              <i class="fa-solid fa-layer-group"></i> Featured Projects
-            </a>
-            <a href="./Ibrahim_Hassaan_CV.pdf" class="btn btn-ghost" download target="_blank">
-              <i class="fa-solid fa-download"></i> Download PDF
+            <a href="#contact" class="btn btn-ghost-dark">
+              Let's talk <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
 
-          <div class="hero-links">
-            <a href="https://linkedin.com/in/ibrahim-hassaan" target="_blank" rel="noopener noreferrer"
-              class="link-item">
-              <i class="fa-brands fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="link-item">
-              <i class="fa-brands fa-github"></i> GitHub
-            </a>
-            <button class="link-item copy-email-btn" data-email="ibrahimhassaan3@gmail.com">
-              <i class="fa-solid fa-envelope"></i> Copy Email
-            </button>
-            <span class="link-item location-tag">
-              <i class="fa-solid fa-location-dot"></i> Cairo, Egypt
-            </span>
+          <div class="hero-scroll-cue">
+            <span class="font-mono">SCROLL TO EXPLORE</span>
+            <span class="cue-line"></span>
           </div>
         </div>
 
-        <div class="hero-card-side">
-          <div class="minimal-terminal">
-            <div class="terminal-bar">
-              <div class="terminal-dots">
-                <span></span><span></span><span></span>
-              </div>
-              <span class="terminal-title">agent_orchestrator.py</span>
-              <button class="copy-terminal-btn" id="copyCodeBtn" title="Copy"><i
-                  class="fa-regular fa-copy"></i></button>
+        <!-- Hero Right Column (Portrait Card) -->
+        <div class="hero-card-col">
+          <div class="portrait-card">
+            <div class="card-accent-notch"></div>
+            <div class="portrait-img-wrapper">
+              <img src="portrait.jpg" alt="Ibrahim Hassaan" class="portrait-photo" />
+              <div class="portrait-overlay"></div>
             </div>
-            <pre class="terminal-code"
-              id="engineerCodeBlock"><code><span class="k">from</span> google.antigravity <span class="k">import</span> Agent, LocalAgentConfig
 
-<span class="k">class</span> <span class="c">AIArchitect</span>:
-    <span class="k">def</span> <span class="f">__init__</span>(self):
-        self.engineer = <span class="s">"Ibrahim Hassaan"</span>
-        self.specialisation = <span class="s">"AI, ML & Agentic Workflows"</span>
-        self.toolkit = [<span class="s">"Antigravity SDK"</span>, <span class="s">"Python"</span>, <span class="s">"C++"</span>, <span class="s">"Java"</span>]
-
-    <span class="k">def</span> <span class="f">build_agent</span>(self):
-        config = LocalAgentConfig(model=<span class="s">"gemini-2.5-flash"</span>)
-        <span class="k">return</span> Agent(config=config, system_prompt=<span class="s">"Solve complex workflows."</span>)</code></pre>
+            <div class="portrait-meta-footer">
+              <div class="meta-row-top">
+                <div class="meta-role font-mono">
+                  <span>ENGINEER / RESEARCHER</span>
+                  <span class="meta-dim">AUTONOMOUS SYSTEMS</span>
+                </div>
+                <div class="meta-loc font-mono text-right">
+                  <span>2026</span>
+                  <span class="meta-dim">30.04° N, 31.23° E</span>
+                </div>
+              </div>
+              <div class="meta-tags-line font-mono">
+                PYTHON • ANTIGRAVITY SDK • MACHINE LEARNING • C++ • JAVA
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- MINIMALIST CV SECTION -->
-    <section id="cv" class="section">
+    <!-- SECTION: SELECTED WORK / THINGS I'VE BUILT -->
+    <section id="work" class="section work-section">
       <div class="container">
-        <div class="section-intro reveal">
-          <span class="intro-tag">Curriculum Vitae</span>
-          <h2 class="section-heading">Professional Overview</h2>
-          <p class="section-subtext">A clean digital resume sheet with verified experience, education, and technical
-            competencies.</p>
+        <!-- Section Header -->
+        <div class="section-split-header">
+          <div>
+            <span class="section-kicker font-mono text-lime">SELECTED WORK • 2023–2026</span>
+            <h2 class="section-headline">Things I've built.</h2>
+          </div>
+          <div class="header-aside-text">
+            A selection of systems spanning applied machine learning, autonomous multi-agent orchestration, developer tooling, and thoughtful systems engineering.
+          </div>
         </div>
 
-        <div class="cv-sheet reveal">
-          <div class="cv-sheet-top">
+        <!-- Filter Tabs -->
+        <div class="work-filters" id="workFilters">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="agents">AI Agents & SDK</button>
+          <button class="filter-tab" data-filter="ml">Machine Learning</button>
+          <button class="filter-tab" data-filter="systems">C++ & Java Systems</button>
+          <button class="filter-tab" data-filter="web">Web</button>
+        </div>
+
+        <!-- 3-Column Projects Grid -->
+        <div class="projects-grid" id="projectsContainer">
+          <!-- Card 1: Autonomous AI Multi-Agent Orchestrator (Lattice Style) -->
+          <article class="project-card" data-category="agents">
+            <div class="card-visual-frame visual-radar">
+              <div class="radar-circle circle-1"></div>
+              <div class="radar-circle circle-2"></div>
+              <div class="radar-circle circle-3"></div>
+              <div class="radar-crosshair crosshair-h"></div>
+              <div class="radar-crosshair crosshair-v"></div>
+              <div class="radar-center-badge font-mono">AGY</div>
+              <div class="radar-blip blip-1"></div>
+              <div class="radar-blip blip-2"></div>
+              <div class="radar-blip blip-3"></div>
+              <div class="radar-blip blip-4"></div>
+              <div class="radar-tag font-mono">ORCHESTRATION LAYER</div>
+            </div>
+
+            <div class="card-content-area">
+              <div class="card-index-bar">
+                <span class="card-index font-mono text-lime">// 01</span>
+                <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="card-arrow-link" aria-label="View Project">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <h3 class="card-title">Autonomous AI Multi-Agent Orchestrator</h3>
+              <p class="card-synopsis">
+                Autonomous multi-agent system built with the Google Antigravity (AGY) SDK and Gemini models with dynamic tool delegation, MCP server integrations, and structured reasoning loops.
+              </p>
+
+              <div class="card-pills-row font-mono">
+                <span class="tech-pill">Antigravity SDK</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Gemini</span>
+                <span class="tech-pill">MCP</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: AI Classification & Predictive Models (Cortex Style) -->
+          <article class="project-card" data-category="ml">
+            <div class="card-visual-frame visual-bars">
+              <div class="chart-window-bar">
+                <span class="win-dot dot-r"></span>
+                <span class="win-dot dot-y"></span>
+                <span class="win-dot dot-g"></span>
+                <span class="win-title font-mono">model_eval.py</span>
+              </div>
+              <div class="chart-bars-wrap">
+                <div class="chart-bar" style="--bar-h: 48%;"></div>
+                <div class="chart-bar" style="--bar-h: 68%;"></div>
+                <div class="chart-bar" style="--bar-h: 56%;"></div>
+                <div class="chart-bar" style="--bar-h: 92%;"></div>
+                <div class="chart-bar" style="--bar-h: 82%;"></div>
+                <div class="chart-bar" style="--bar-h: 100%;"></div>
+                <div class="chart-bar" style="--bar-h: 74%;"></div>
+              </div>
+              <div class="radar-tag font-mono">ACCURACY: 98.4%</div>
+            </div>
+
+            <div class="card-content-area">
+              <div class="card-index-bar">
+                <span class="card-index font-mono text-lime">// 02</span>
+                <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="card-arrow-link" aria-label="View Project">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <h3 class="card-title">AI Classification & Predictive Models</h3>
+              <p class="card-synopsis">
+                Machine learning pipelines in Python featuring exploratory data analysis, feature selection, normalization, and classification benchmarks with visual reporting.
+              </p>
+
+              <div class="card-pills-row font-mono">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">ML Pipeline</span>
+                <span class="tech-pill">Visualization</span>
+                <span class="tech-pill">PyCharm</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: High-Performance C++ Architecture (Parcel Style) -->
+          <article class="project-card" data-category="systems">
+            <div class="card-visual-frame visual-wireframe">
+              <div class="wireframe-container">
+                <div class="wire-box">
+                  <div class="wire-face face-front"></div>
+                  <div class="wire-face face-back"></div>
+                  <div class="wire-scan-beam"></div>
+                </div>
+              </div>
+              <div class="radar-tag font-mono">LOW-LATENCY MEMORY</div>
+            </div>
+
+            <div class="card-content-area">
+              <div class="card-index-bar">
+                <span class="card-index font-mono text-lime">// 03</span>
+                <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="card-arrow-link" aria-label="View Project">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <h3 class="card-title">High-Performance C++ Data Architecture</h3>
+              <p class="card-synopsis">
+                Object-oriented systems engineering modules developed in C++ and Visual Studio, emphasizing custom data structures, memory management, and algorithmic speed.
+              </p>
+
+              <div class="card-pills-row font-mono">
+                <span class="tech-pill">C++</span>
+                <span class="tech-pill">Data Structures</span>
+                <span class="tech-pill">Algorithms</span>
+                <span class="tech-pill">Visual Studio</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Modular Java Application Framework -->
+          <article class="project-card" data-category="systems">
+            <div class="card-visual-frame visual-modules">
+              <div class="modules-diagram">
+                <div class="module-node node-a font-mono">Core.Engine</div>
+                <div class="module-link-line"></div>
+                <div class="module-node node-b font-mono">Service.IO</div>
+                <div class="module-node node-c font-mono">Stream.Handler</div>
+              </div>
+              <div class="radar-tag font-mono">MODULAR OOP ARCHITECTURE</div>
+            </div>
+
+            <div class="card-content-area">
+              <div class="card-index-bar">
+                <span class="card-index font-mono text-lime">// 04</span>
+                <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="card-arrow-link" aria-label="View Project">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <h3 class="card-title">Modular Java Application Framework</h3>
+              <p class="card-synopsis">
+                Multi-layer desktop application architecture implemented in Java with NetBeans. Focuses on modular inheritance hierarchies, exception handling, and file streams.
+              </p>
+
+              <div class="card-pills-row font-mono">
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">NetBeans</span>
+                <span class="tech-pill">OOP Architecture</span>
+                <span class="tech-pill">Git</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Digital Portfolio & Interactive CV Hub -->
+          <article class="project-card" data-category="web">
+            <div class="card-visual-frame visual-webhub">
+              <div class="webhub-wire">
+                <div class="hub-bar"></div>
+                <div class="hub-grid-lines"></div>
+                <div class="hub-pill-dot font-mono"><span class="pulse-mini"></span> LIVE REPO</div>
+              </div>
+              <div class="radar-tag font-mono">GITHUB PAGES CI/CD</div>
+            </div>
+
+            <div class="card-content-area">
+              <div class="card-index-bar">
+                <span class="card-index font-mono text-lime">// 05</span>
+                <a href="https://github.com/IbrahimHassaan1/ibrahim-hassaan" target="_blank" rel="noopener noreferrer" class="card-arrow-link" aria-label="View Project">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <h3 class="card-title">Digital Portfolio & Interactive CV Hub</h3>
+              <p class="card-synopsis">
+                Modern responsive single-page web app built with minimalist typography, client-side filtering, printable resume layouts, and automated GitHub Actions deployment.
+              </p>
+
+              <div class="card-pills-row font-mono">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">GitHub Pages</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: ABOUT / CAPABILITIES (MANIFESTO STYLE) -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="manifesto-grid">
+          <!-- Left Column: Bold Typographic Manifesto -->
+          <div class="manifesto-left">
+            <span class="section-kicker font-mono text-lime">ABOUT / CAPABILITIES</span>
+            <h2 class="manifesto-headline">
+              Code is the<br />
+              medium.<br />
+              <span class="manifesto-dim">Impact is the</span><br />
+              <span class="manifesto-dim">goal.</span>
+            </h2>
+          </div>
+
+          <!-- Right Column: Paragraph + Capabilities Table -->
+          <div class="manifesto-right">
+            <p class="manifesto-bio">
+              I'm a computer science engineer who likes the space between research and reality. I design intelligent systems, build the infrastructure behind them, and obsess over clean execution.
+            </p>
+
+            <div class="capabilities-table">
+              <div class="cap-row">
+                <div class="cap-label font-mono text-lime">LANGUAGES</div>
+                <div class="cap-content">Python • C++ • Java • SQL • HTML5 / CSS3</div>
+              </div>
+
+              <div class="cap-row">
+                <div class="cap-label font-mono text-lime">AI / AGENTS</div>
+                <div class="cap-content">Google Antigravity SDK • Gemini API • Autonomous Agents • Machine Learning</div>
+              </div>
+
+              <div class="cap-row">
+                <div class="cap-label font-mono text-lime">SYSTEMS</div>
+                <div class="cap-content">OOP Design • Data Structures • Memory Optimization • Git • Linux • CI/CD</div>
+              </div>
+
+              <div class="cap-row">
+                <div class="cap-label font-mono text-lime">FOCUS</div>
+                <div class="cap-content">Agentic Workflows • Applied Machine Learning • Scalable Backend Architecture</div>
+              </div>
+            </div>
+
+            <!-- Credentials Snapshot -->
+            <div class="credentials-bar">
+              <div class="cred-item">
+                <span class="cred-num font-mono text-lime">2026</span>
+                <span class="cred-desc">BSc Computer Science (AI & ML) — BUE</span>
+              </div>
+              <div class="cred-item">
+                <span class="cred-num font-mono text-lime">2023</span>
+                <span class="cred-desc">IT Trainee — CEG International, Qatar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CURRICULUM VITAE (SLEEK EDITORIAL CV SHEET) -->
+    <section id="cv" class="section cv-section">
+      <div class="container">
+        <div class="section-split-header">
+          <div>
+            <span class="section-kicker font-mono text-lime">DOCUMENTATION</span>
+            <h2 class="section-headline">Curriculum Vitae.</h2>
+          </div>
+          <div class="cv-quick-actions">
+            <button class="btn btn-sm btn-ghost-dark" onclick="window.print()">
+              <i class="fa-solid fa-print"></i> Print CV
+            </button>
+            <a href="./Ibrahim_Hassaan_CV.pdf" class="btn btn-sm btn-lime" download target="_blank">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </a>
+            <a href="./Ibrahim_Hassaan_CV.wps" class="btn btn-sm btn-ghost-dark" download>
+              <i class="fa-solid fa-file-word"></i> Word / WPS
+            </a>
+          </div>
+        </div>
+
+        <div class="editorial-cv-card">
+          <div class="cv-card-header">
             <div>
-              <h3 class="cv-name">Ibrahim Hesham Hassaan</h3>
-              <p class="cv-subtitle">Computer Science & AI Graduate | Aspiring Software, ML & Agent Engineer</p>
+              <h3 class="cv-applicant-name">Ibrahim Hesham Hassaan</h3>
+              <p class="cv-applicant-title font-mono">
+                Computer Science & AI Graduate <span>•</span> Aspiring Software, ML & Agent Engineer
+              </p>
             </div>
-            <div class="cv-actions">
-              <button class="btn btn-sm btn-primary" onclick="window.print()">
-                <i class="fa-solid fa-print"></i> Print CV
-              </button>
-              <a href="./Ibrahim_Hassaan_CV.pdf" class="btn btn-sm btn-secondary" download target="_blank">
-                <i class="fa-solid fa-file-pdf"></i> Download PDF
-              </a>
-              <a href="./Ibrahim_Hassaan_CV.wps" class="btn btn-sm btn-ghost" download>
-                <i class="fa-solid fa-file-word"></i> WPS / Word
-              </a>
-              <a href="https://gist.github.com/IbrahimHassaan1/b2e6b85eda3ea484c28d9e83bd5beaac" target="_blank"
-                rel="noopener noreferrer" class="btn btn-sm btn-ghost">
-                <i class="fa-brands fa-github"></i> Gist
-              </a>
+            <div class="cv-contact-tags font-mono">
+              <span><i class="fa-solid fa-location-dot text-lime"></i> Cairo, Egypt</span>
+              <span><i class="fa-solid fa-envelope text-lime"></i> ibrahimhassaan3@gmail.com</span>
+              <a href="https://linkedin.com/in/ibrahim-hassaan" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin text-lime"></i> LinkedIn</a>
+              <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github text-lime"></i> GitHub</a>
             </div>
           </div>
 
-          <div class="cv-meta-bar">
-            <span><i class="fa-solid fa-location-dot"></i> Maadi, Cairo, Egypt</span>
-            <span><i class="fa-solid fa-envelope"></i> <a
-                href="mailto:ibrahimhassaan3@gmail.com">ibrahimhassaan3@gmail.com</a></span>
-            <span><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/ibrahim-hassaan"
-                target="_blank" rel="noopener noreferrer">linkedin.com/in/ibrahim-hassaan</a></span>
-            <span><i class="fa-brands fa-github"></i> <a href="https://github.com/IbrahimHassaan1" target="_blank"
-                rel="noopener noreferrer">github.com/IbrahimHassaan1</a></span>
-          </div>
-
-          <div class="cv-columns">
-            <div class="cv-left">
-              <!-- Summary -->
-              <div class="cv-group">
-                <h4 class="cv-group-title">Profile Summary</h4>
-                <p class="cv-body-text">
-                  Motivated Computer Science graduate specialising in <strong>Artificial Intelligence and Machine
-                    Learning</strong> at the British University in Egypt. Experienced in software development across
-                  multiple programming languages (C++, Python, Java), autonomous AI agent systems (Google Antigravity
-                  SDK), and frontline IT support. Eager to engineer high-impact, intelligent solutions in a
-                  collaborative professional environment.
+          <div class="cv-body-grid">
+            <!-- Left CV Column -->
+            <div class="cv-col-left">
+              <div class="cv-block">
+                <h4 class="cv-block-title font-mono text-lime">// 01. PROFILE SUMMARY</h4>
+                <p class="cv-paragraph">
+                  Motivated Computer Science graduate specialising in <strong>Artificial Intelligence and Machine Learning</strong> at the British University in Egypt. Experienced in software development across multiple programming languages (C++, Python, Java), autonomous AI agent systems (Google Antigravity SDK), and frontline IT support. Eager to engineer high-impact, intelligent solutions in a collaborative professional environment.
                 </p>
               </div>
 
-              <!-- Experience -->
-              <div class="cv-group">
-                <h4 class="cv-group-title">Work Experience</h4>
-                <div class="cv-job">
-                  <div class="cv-job-header">
+              <div class="cv-block">
+                <h4 class="cv-block-title font-mono text-lime">// 02. EXPERIENCE</h4>
+                <div class="cv-role-item">
+                  <div class="cv-role-header">
                     <div>
-                      <h5 class="cv-job-title">IT Trainee</h5>
-                      <span class="cv-job-company">CEG International • Doha, Qatar</span>
+                      <h5 class="cv-role-title">IT Trainee</h5>
+                      <span class="cv-role-company text-lime">CEG International • Doha, Qatar</span>
                     </div>
-                    <span class="cv-job-date">Oct 2023 – Nov 2023</span>
+                    <span class="cv-role-date font-mono">Oct 2023 – Nov 2023</span>
                   </div>
-                  <ul class="cv-bullet-list">
-                    <li>Delivered frontline technical support across internal teams, resolving hardware, operating
-                      system, and software issues.</li>
-                    <li>Diagnosed workstation connectivity, system configurations, and peripheral errors with minimal
-                      user disruption.</li>
-                    <li>Managed ticket triage and escalated complex network incidents to senior engineering personnel.
-                    </li>
-                    <li>Participated in professional development sessions covering IT infrastructure standards and
-                      troubleshooting best practices.</li>
+                  <ul class="cv-checklist">
+                    <li>Delivered frontline technical support across internal business teams, resolving workstation OS, software, and peripheral issues.</li>
+                    <li>Diagnosed workstation connectivity, network configurations, and hardware failures with minimal user disruption.</li>
+                    <li>Managed ticket triage and escalated complex network incidents to senior engineering personnel.</li>
+                    <li>Participated in professional development sessions covering enterprise IT infrastructure standards and troubleshooting best practices.</li>
                   </ul>
                 </div>
               </div>
-
-              <!-- Selected Projects -->
-              <div class="cv-group">
-                <h4 class="cv-group-title">Selected Engineering Work</h4>
-                <div class="cv-project-compact">
-                  <h5>Autonomous AI Multi-Agent Workflows (Google Antigravity SDK)</h5>
-                  <p>Engineered autonomous agent pipelines utilizing Google Antigravity SDK, function calling, and
-                    structured output parsing.</p>
-                </div>
-                <div class="cv-project-compact">
-                  <h5>AI Classification & Predictive Models</h5>
-                  <p>Developed supervised and unsupervised machine learning algorithms in Python with data preprocessing
-                    and evaluation metrics.</p>
-                </div>
-                <div class="cv-project-compact">
-                  <h5>Object-Oriented C++ & Java Systems</h5>
-                  <p>Engineered modular software architectures implementing advanced data structures, algorithmic
-                    efficiency, and clean code principles.</p>
-                </div>
-              </div>
             </div>
 
-            <div class="cv-right">
-              <!-- Education -->
-              <div class="cv-group">
-                <h4 class="cv-group-title">Education</h4>
-                <div class="cv-edu-item">
-                  <h5>BSc in Computer Science</h5>
-                  <p class="cv-edu-field">Specialisation: <strong>Artificial Intelligence & Machine Learning</strong>
-                  </p>
-                  <p class="cv-edu-school">The British University in Egypt (BUE)</p>
-                  <span class="cv-edu-date">Graduation: 2026</span>
+            <!-- Right CV Column -->
+            <div class="cv-col-right">
+              <div class="cv-block">
+                <h4 class="cv-block-title font-mono text-lime">// 03. EDUCATION</h4>
+                <div class="cv-edu-entry">
+                  <div class="cv-edu-degree">BSc in Computer Science</div>
+                  <div class="cv-edu-sub">Specialisation: <strong>Artificial Intelligence & Machine Learning</strong></div>
+                  <div class="cv-edu-inst">The British University in Egypt (BUE) — Cairo, Egypt</div>
+                  <span class="cv-edu-tag font-mono text-lime">Graduation: 2026</span>
                 </div>
 
-                <div class="cv-edu-item" style="margin-top: 16px;">
-                  <h5>High School Diploma</h5>
-                  <p class="cv-edu-school">Al-Furqan Secondary School — Doha, Qatar</p>
-                  <span class="cv-edu-date">Oct 2016 – May 2019</span>
-                </div>
-              </div>
-
-              <!-- Technical Skills -->
-              <div class="cv-group">
-                <h4 class="cv-group-title">Technical Skills</h4>
-                <div class="skill-category">
-                  <h6>AI & Agentic Systems</h6>
-                  <div class="tag-row">
-                    <span class="minimal-tag">Google Antigravity SDK</span>
-                    <span class="minimal-tag">AI Agent Orchestration</span>
-                    <span class="minimal-tag">Gemini API</span>
-                    <span class="minimal-tag">Machine Learning</span>
-                  </div>
-                </div>
-
-                <div class="skill-category">
-                  <h6>Programming Languages</h6>
-                  <div class="tag-row">
-                    <span class="minimal-tag">C++</span>
-                    <span class="minimal-tag">Python</span>
-                    <span class="minimal-tag">Java</span>
-                    <span class="minimal-tag">HTML5</span>
-                    <span class="minimal-tag">CSS3</span>
-                  </div>
-                </div>
-
-                <div class="skill-category">
-                  <h6>IDEs & Developer Tools</h6>
-                  <div class="tag-row">
-                    <span class="minimal-tag">Visual Studio</span>
-                    <span class="minimal-tag">PyCharm</span>
-                    <span class="minimal-tag">NetBeans</span>
-                    <span class="minimal-tag">Git</span>
-                  </div>
-                </div>
-
-                <div class="skill-category">
-                  <h6>Core Competencies</h6>
-                  <div class="tag-row">
-                    <span class="minimal-tag">Problem Solving</span>
-                    <span class="minimal-tag">Data Visualisation</span>
-                    <span class="minimal-tag">IT Diagnostics</span>
-                  </div>
+                <div class="cv-edu-entry" style="margin-top: 18px;">
+                  <div class="cv-edu-degree">High School Diploma</div>
+                  <div class="cv-edu-inst">Al-Furqan Secondary School — Doha, Qatar</div>
+                  <span class="cv-edu-tag font-mono text-lime">2016 – 2019</span>
                 </div>
               </div>
 
-              <!-- Languages -->
-              <div class="cv-group">
-                <h4 class="cv-group-title">Languages</h4>
-                <ul class="cv-lang-list">
-                  <li><strong>Arabic:</strong> Native Proficiency 🇪🇬</li>
-                  <li><strong>English:</strong> Full Professional Working Proficiency 🇬🇧</li>
-                </ul>
+              <div class="cv-block">
+                <h4 class="cv-block-title font-mono text-lime">// 04. LANGUAGES</h4>
+                <div class="cv-lang-row">
+                  <div><strong>Arabic:</strong> Native Proficiency 🇪🇬</div>
+                  <div><strong>English:</strong> Full Professional Proficiency 🇬🇧</div>
+                </div>
               </div>
             </div>
           </div>
@@ -340,475 +497,34 @@
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section bg-subtle">
+    <!-- SECTION: CALL TO ACTION / CONTACT -->
+    <section id="contact" class="section cta-section">
       <div class="container">
-        <div class="section-intro reveal">
-          <span class="intro-tag">Portfolio</span>
-          <h2 class="section-heading">Featured Projects</h2>
-          <p class="section-subtext">Autonomous AI agents, machine learning pipelines, and high-performance software
-            systems.</p>
-        </div>
+        <div class="cta-banner">
+          <div class="cta-grid-bg" aria-hidden="true"></div>
+          <div class="cta-glow-accent" aria-hidden="true"></div>
 
-        <!-- Filter Controls -->
-        <div class="filter-bar" id="projectFilters">
-          <button class="filter-btn active" data-pfilter="all">All</button>
-          <button class="filter-btn" data-pfilter="agents">AI Agents & SDK</button>
-          <button class="filter-btn" data-pfilter="ai">Machine Learning</button>
-          <button class="filter-btn" data-pfilter="systems">C++ & Java Systems</button>
-          <button class="filter-btn" data-pfilter="web">Web</button>
-        </div>
+          <div class="cta-inner-content">
+            <span class="section-kicker font-mono text-lime">HAVE A PROBLEM WORTH SOLVING?</span>
 
-        <div class="projects-grid" id="projectsContainer">
-          <!-- Project 1: Google Antigravity Agent -->
-          <div class="minimal-card reveal" data-pcategory="agents">
-            <div class="card-meta">
-              <span class="card-badge">Google Antigravity SDK</span>
-              <span class="card-year">2026</span>
-            </div>
-            <h3 class="card-title">Autonomous AI Multi-Agent Orchestrator</h3>
-            <p class="card-desc">
-              Multi-agent automation system built with the Google Antigravity (AGY) SDK and Gemini models. Implements
-              dynamic tool delegation, custom MCP server integrations, structured output validation, and stateful
-              multi-turn reasoning loops.
-            </p>
-            <div class="card-stack">
-              <span class="stack-pill">Google Antigravity SDK</span>
-              <span class="stack-pill">Python</span>
-              <span class="stack-pill">Gemini Models</span>
-              <span class="stack-pill">Multi-Agent Systems</span>
-            </div>
-            <div class="card-foot">
-              <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="arrow-link">
-                View Repository <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
+            <h2 class="cta-headline">
+              Let's build something<br />
+              <span class="text-lime">useful.</span>
+            </h2>
 
-          <!-- Project 2: AI Classification -->
-          <div class="minimal-card reveal" data-pcategory="ai">
-            <div class="card-meta">
-              <span class="card-badge">Machine Learning</span>
-              <span class="card-year">2026</span>
-            </div>
-            <h3 class="card-title">AI Classification & Prediction Models</h3>
-            <p class="card-desc">
-              Machine learning pipeline developed in Python for exploratory data analysis, data normalization, feature
-              selection, and classification benchmarking with analytical data visualisation.
-            </p>
-            <div class="card-stack">
-              <span class="stack-pill">Python</span>
-              <span class="stack-pill">Machine Learning</span>
-              <span class="stack-pill">Data Visualisation</span>
-              <span class="stack-pill">PyCharm</span>
-            </div>
-            <div class="card-foot">
-              <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="arrow-link">
-                View Repository <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 3: C++ Systems -->
-          <div class="minimal-card reveal" data-pcategory="systems">
-            <div class="card-meta">
-              <span class="card-badge">C++ Architecture</span>
-              <span class="card-year">2026</span>
-            </div>
-            <h3 class="card-title">High-Performance C++ Data Architecture</h3>
-            <p class="card-desc">
-              Object-oriented system engineering modules built in C++ and Visual Studio. Focuses on custom data
-              structure implementations, algorithmic optimization, and low-overhead memory management.
-            </p>
-            <div class="card-stack">
-              <span class="stack-pill">C++</span>
-              <span class="stack-pill">Data Structures</span>
-              <span class="stack-pill">Algorithms</span>
-              <span class="stack-pill">Visual Studio</span>
-            </div>
-            <div class="card-foot">
-              <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="arrow-link">
-                View Repository <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 4: Java Framework -->
-          <div class="minimal-card reveal" data-pcategory="systems">
-            <div class="card-meta">
-              <span class="card-badge">Java OOP</span>
-              <span class="card-year">2025</span>
-            </div>
-            <h3 class="card-title">Modular Java Application Framework</h3>
-            <p class="card-desc">
-              Multi-layer desktop application logic architected in Java and Apache NetBeans. Implements modular class
-              hierarchies, file stream handlers, exception safety, and business workflows.
-            </p>
-            <div class="card-stack">
-              <span class="stack-pill">Java</span>
-              <span class="stack-pill">Apache NetBeans</span>
-              <span class="stack-pill">OOP</span>
-              <span class="stack-pill">Git</span>
-            </div>
-            <div class="card-foot">
-              <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="arrow-link">
-                View Repository <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 5: Web Hub -->
-          <div class="minimal-card reveal" data-pcategory="web">
-            <div class="card-meta">
-              <span class="card-badge">Web & Cloud</span>
-              <span class="card-year">2026</span>
-            </div>
-            <h3 class="card-title">Digital Portfolio & Interactive CV Hub</h3>
-            <p class="card-desc">
-              Modern single-page web app built with minimalist typography, client-side filtering, printable resume
-              layouts, dark/light themes, and automated GitHub Pages deployment.
-            </p>
-            <div class="card-stack">
-              <span class="stack-pill">HTML5</span>
-              <span class="stack-pill">CSS3</span>
-              <span class="stack-pill">JavaScript</span>
-              <span class="stack-pill">GitHub Pages</span>
-            </div>
-            <div class="card-foot">
-              <a href="https://github.com/IbrahimHassaan1/ibrahim-hassaan" target="_blank" rel="noopener noreferrer"
-                class="arrow-link">
-                Repository <i class="fa-solid fa-arrow-right"></i>
-              </a>
-              <a href="./Ibrahim_Hassaan_CV.pdf" target="_blank" class="arrow-link">
-                PDF <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-intro reveal">
-          <span class="intro-tag">Background</span>
-          <h2 class="section-heading">About Me</h2>
-          <p class="section-subtext">Analytical approach combining computer science theory, machine learning, and
-            autonomous agent engineering.</p>
-        </div>
-
-        <div class="about-flex reveal">
-          <div class="about-main-text">
-            <p>
-              I am a Computer Science student specialising in <strong>Artificial Intelligence and Machine
-                Learning</strong> at the British University in Egypt. My technical focus encompasses building scalable
-              software architectures, implementing machine learning models, and designing autonomous AI agents with the
-              <strong>Google Antigravity SDK</strong>.
-            </p>
-            <p>
-              Alongside core software engineering in C++, Python, and Java, I bring practical experience from frontline
-              IT infrastructure support at CEG International in Doha, Qatar. I enjoy working in dynamic, collaborative
-              environments where engineering excellence and algorithmic problem-solving drive product success.
-            </p>
-
-            <div class="key-traits-grid">
-              <div class="trait-box">
-                <span class="trait-icon"><i class="fa-solid fa-robot"></i></span>
-                <div>
-                  <h4>Autonomous AI Agents & SDKs</h4>
-                  <p>Agent orchestration, Google Antigravity SDK, tool integrations, and reasoning loops.</p>
-                </div>
-              </div>
-
-              <div class="trait-box">
-                <span class="trait-icon"><i class="fa-solid fa-brain"></i></span>
-                <div>
-                  <h4>AI & Machine Learning</h4>
-                  <p>Statistical learning, feature engineering, and data-driven predictive models.</p>
-                </div>
-              </div>
-
-              <div class="trait-box">
-                <span class="trait-icon"><i class="fa-solid fa-code"></i></span>
-                <div>
-                  <h4>Multi-Language Systems</h4>
-                  <p>C++, Python, Java, and modern web application development.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-metrics">
-            <div class="metric-card">
-              <span class="metric-num">2026</span>
-              <span class="metric-lbl">BSc Computer Science (AI & ML)</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-num">5+</span>
-              <span class="metric-lbl">Languages & AI SDKs</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-num">2</span>
-              <span class="metric-lbl">Fluent Languages (Arabic, English)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="section bg-subtle">
-      <div class="container">
-        <div class="section-intro reveal">
-          <span class="intro-tag">Stack</span>
-          <h2 class="section-heading">Skills & Tooling</h2>
-          <p class="section-subtext">Technologies and environments utilized across projects and systems.</p>
-        </div>
-
-        <div class="filter-bar" id="skillFilters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="ai">AI & Agents</button>
-          <button class="filter-btn" data-filter="languages">Languages</button>
-          <button class="filter-btn" data-filter="tools">IDEs & Tools</button>
-          <button class="filter-btn" data-filter="domains">Competencies</button>
-        </div>
-
-        <div class="skills-grid" id="skillsContainer">
-          <div class="skill-tile reveal" data-category="ai">
-            <span class="tile-icon"><i class="fa-solid fa-robot"></i></span>
-            <div class="tile-content">
-              <h4>Google Antigravity SDK</h4>
-              <p>Autonomous Agents, Subagent Delegation, Tool Context, Multi-Turn Reasoning</p>
-            </div>
-          </div>
-
-          <div class="skill-tile reveal" data-category="ai">
-            <span class="tile-icon"><i class="fa-solid fa-brain"></i></span>
-            <div class="tile-content">
-              <h4>Artificial Intelligence & ML</h4>
-              <p>Predictive Modeling, Feature Engineering, Neural Concepts</p>
-            </div>
-          </div>
-
-          <div class="skill-tile reveal" data-category="languages">
-            <span class="tile-icon"><i class="fa-solid fa-code"></i></span>
-            <div class="tile-content">
-              <h4>C++</h4>
-              <p>OOP, Data Structures, Memory Management, Algorithms</p>
-            </div>
-          </div>
-
-          <div class="skill-tile reveal" data-category="languages">
-            <span class="tile-icon"><i class="fa-brands fa-python"></i></span>
-            <div class="tile-content">
-              <h4>Python</h4>
-              <p>AI/ML Modeling, Data Visualisation, Scripting, Automation</p>
-            </div>
-          </div>
-
-          <div class="skill-tile reveal" data-category="languages">
-            <span class="tile-icon"><i class="fa-brands fa-java"></i></span>
-            <div class="tile-content">
-              <h4>Java</h4>
-              <p>Object-Oriented Design, Modular Applications, Logic</p>
-            </div>
-          </div>
-
-          <div class="skill-tile reveal" data-category="languages">
-            <span class="tile-icon"><i class="fa-brands fa-html5"></i></span>
-            <div class="tile-content">
-              <h4>HTML5 & CSS3</h4>
-              <p>Semantic Layouts, Responsive UI, Accessibility, Modern Styling</p>
-            </div>
-          </div>
-
-          <div class="skill-tile reveal" data-category="tools">
-            <span class="tile-icon"><i class="fa-solid fa-desktop"></i></span>
-            <div class="tile-content">
-              <h4>Visual Studio</h4>
-              <p>C++ and C# Solutions, Debugging, Toolchains</p>
-            </div>
-          </div>
-
-          <div class="skill-tile reveal" data-category="tools">
-            <span class="tile-icon"><i class="fa-solid fa-terminal"></i></span>
-            <div class="tile-content">
-              <h4>PyCharm</h4>
-              <p>Python Development, Environments, ML Workflows</p>
-            </div>
-          </div>
-
-          <div class="skill-tile reveal" data-category="tools">
-            <span class="tile-icon"><i class="fa-solid fa-cubes"></i></span>
-            <div class="tile-content">
-              <h4>Apache NetBeans</h4>
-              <p>Java Application Building, Refactoring, GUI Tools</p>
-            </div>
-          </div>
-
-          <div class="skill-tile reveal" data-category="tools">
-            <span class="tile-icon"><i class="fa-brands fa-git-alt"></i></span>
-            <div class="tile-content">
-              <h4>Git & GitHub</h4>
-              <p>Version Control, Branching, CI/CD Actions, Repositories</p>
-            </div>
-          </div>
-
-          <div class="skill-tile reveal" data-category="domains">
-            <span class="tile-icon"><i class="fa-solid fa-chart-line"></i></span>
-            <div class="tile-content">
-              <h4>Data Visualisation & Research</h4>
-              <p>Analytical Reporting, Data Insights, Technical Research</p>
-            </div>
-          </div>
-
-          <div class="skill-tile reveal" data-category="domains">
-            <span class="tile-icon"><i class="fa-solid fa-puzzle-piece"></i></span>
-            <div class="tile-content">
-              <h4>Problem Solving</h4>
-              <p>Algorithmic Optimization, Edge-Case Handling, Testing</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section-intro reveal">
-          <span class="intro-tag">Experience</span>
-          <h2 class="section-heading">Work History</h2>
-          <p class="section-subtext">Hands-on technical background in IT support and operations.</p>
-        </div>
-
-        <div class="minimal-timeline">
-          <div class="timeline-row reveal">
-            <div class="timeline-date-col">
-              <span class="time-pill">Oct 2023 – Nov 2023</span>
-              <span class="time-loc">Doha, Qatar</span>
-            </div>
-            <div class="timeline-body-col">
-              <h3 class="time-role">IT Trainee</h3>
-              <h4 class="time-org">CEG International</h4>
-              <p class="time-desc">
-                Provided frontline technical support across internal business units. Troubleshot diverse workstation
-                operating systems, application configurations, hardware issues, and network connectivity.
-              </p>
-              <ul class="time-points">
-                <li>Diagnosed and resolved hardware/software incident tickets with minimal user downtime.</li>
-                <li>Triaged and escalated high-severity infrastructure problems to senior network engineers.</li>
-                <li>Engaged in enterprise IT protocol workshops and standard troubleshooting procedures.</li>
-              </ul>
-              <div class="time-tags">
-                <span>IT Support</span>
-                <span>Diagnostics</span>
-                <span>Hardware & Software</span>
-                <span>Ticket Escalation</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION SECTION -->
-    <section id="education" class="section bg-subtle">
-      <div class="container">
-        <div class="section-intro reveal">
-          <span class="intro-tag">Academics</span>
-          <h2 class="section-heading">Education</h2>
-          <p class="section-subtext">Academic foundations in Computer Science, Artificial Intelligence, and Sciences.
-          </p>
-        </div>
-
-        <div class="edu-grid reveal">
-          <div class="edu-box featured">
-            <span class="edu-year">Graduation: 2026</span>
-            <h3 class="edu-degree">BSc in Computer Science</h3>
-            <h4 class="edu-spec">Specialisation: Artificial Intelligence & Machine Learning</h4>
-            <p class="edu-univ">The British University in Egypt (BUE) — Cairo, Egypt</p>
-            <p class="edu-info">
-              Rigorous coursework in Data Structures & Algorithms, Machine Learning, Deep Learning Fundamentals,
-              Object-Oriented Software Engineering (C++, Java, Python), Database Systems, and Architecture.
-            </p>
-          </div>
-
-          <div class="edu-box">
-            <span class="edu-year">Oct 2016 – May 2019</span>
-            <h3 class="edu-degree">High School Diploma</h3>
-            <p class="edu-univ">Al-Furqan Secondary School — Algharafa, Doha, Qatar</p>
-            <p class="edu-info">
-              Strong foundational background in advanced mathematics, analytical sciences, and physics.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-intro reveal">
-          <span class="intro-tag">Connect</span>
-          <h2 class="section-heading">Get in Touch</h2>
-          <p class="section-subtext">Open to software engineering, machine learning, and AI agent opportunities.</p>
-        </div>
-
-        <div class="contact-grid reveal">
-          <div class="contact-methods">
-            <button class="contact-tile copy-email-btn" data-email="ibrahimhassaan3@gmail.com">
-              <span class="tile-icon"><i class="fa-solid fa-envelope"></i></span>
-              <div>
-                <span class="contact-meta">Email (Click to copy)</span>
-                <span class="contact-val">ibrahimhassaan3@gmail.com</span>
-              </div>
-            </button>
-
-            <a href="https://linkedin.com/in/ibrahim-hassaan" target="_blank" rel="noopener noreferrer"
-              class="contact-tile">
-              <span class="tile-icon"><i class="fa-brands fa-linkedin"></i></span>
-              <div>
-                <span class="contact-meta">LinkedIn</span>
-                <span class="contact-val">linkedin.com/in/ibrahim-hassaan</span>
-              </div>
-            </a>
-
-            <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="contact-tile">
-              <span class="tile-icon"><i class="fa-brands fa-github"></i></span>
-              <div>
-                <span class="contact-meta">GitHub</span>
-                <span class="contact-val">github.com/IbrahimHassaan1</span>
-              </div>
-            </a>
-
-            <div class="contact-tile no-hover">
-              <span class="tile-icon"><i class="fa-solid fa-location-dot"></i></span>
-              <div>
-                <span class="contact-meta">Location</span>
-                <span class="contact-val">Maadi, Cairo, Egypt</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="cv-download-panel">
-            <h3>Resume Downloads</h3>
-            <p>Download my verified resume in your preferred format:</p>
-            <div class="panel-buttons">
-              <button class="btn btn-primary btn-block" onclick="window.print()">
-                <i class="fa-solid fa-print"></i> Print / Save as PDF
+            <div class="cta-email-wrapper">
+              <button class="cta-email-action copy-email-btn" data-email="ibrahimhassaan3@gmail.com">
+                <span class="email-address">ibrahimhassaan3@gmail.com</span>
+                <span class="cta-arrow-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
               </button>
-              <a href="./Ibrahim_Hassaan_CV.pdf" class="btn btn-secondary btn-block" download target="_blank">
-                <i class="fa-solid fa-file-pdf"></i> Download PDF Version
-              </a>
-              <a href="./Ibrahim_Hassaan_CV.wps" class="btn btn-ghost btn-block" download>
-                <i class="fa-solid fa-file-word"></i> Download Word / WPS
-              </a>
-              <a href="https://gist.github.com/IbrahimHassaan1/b2e6b85eda3ea484c28d9e83bd5beaac" target="_blank"
-                rel="noopener noreferrer" class="btn btn-ghost btn-block">
-                <i class="fa-solid fa-code"></i> View Markdown Gist
-              </a>
+            </div>
+
+            <div class="cta-meta-links font-mono">
+              <a href="https://linkedin.com/in/ibrahim-hassaan" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <span class="bullet-sep">•</span>
+              <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <span class="bullet-sep">•</span>
+              <a href="./Ibrahim_Hassaan_CV.pdf" download target="_blank">Download Resume PDF ↓</a>
             </div>
           </div>
         </div>
@@ -816,32 +532,30 @@
     </section>
   </main>
 
-  <!-- Toast Notification -->
-  <div id="toastNotification" class="toast-notification"></div>
+  <!-- TOAST NOTIFICATION -->
+  <div id="toastNotification" class="toast-notification font-mono"></div>
 
-  <!-- Back to Top -->
-  <button id="backToTopBtn" class="back-to-top" title="Back to Top" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-
-  <!-- FOOTER -->
+  <!-- SITE FOOTER -->
   <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-left">
-        <span class="footer-badge">IH</span>
-        <span>Ibrahim Hesham Hassaan</span>
+    <div class="container footer-row">
+      <div class="footer-left font-mono">
+        &copy; <span id="currentYear"></span> Ibrahim Hassaan. Built with intention.
       </div>
-      <p class="footer-copy">
-        &copy; <span id="currentYear"></span> Ibrahim Hassaan. Computer Science & AI Graduate.
-      </p>
       <div class="footer-right">
-        <a href="#hero">Top <i class="fa-solid fa-arrow-up"></i></a>
+        <a href="https://github.com/IbrahimHassaan1" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/ibrahim-hassaan" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="#hero" class="back-to-top font-mono" id="backToTop">
+          BACK TO TOP <i class="fa-solid fa-arrow-up"></i>
+        </a>
       </div>
     </div>
   </footer>
 
-  <!-- Custom JavaScript -->
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
-
 </html>
